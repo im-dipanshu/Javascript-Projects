@@ -28,7 +28,10 @@ header p {
   width: 25%;
   height: 50vh;
   color: white;
-  margin-left: -200px;
+  margin-left: -50rem;
+  transition: all 0.8s ease;
+  border-bottom-right-radius: 20px;
+  opacity: 0.4;
 }
 
 .AddId {
