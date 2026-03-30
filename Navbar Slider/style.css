@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header p {
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+.Navbar {
+  background-color: rgb(222, 217, 217);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.MenuBox {
+  align-items: flex-start;
+}
+.OptionBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+.SideBar {
+  background-color: rgb(222, 217, 217);
+  width: 25%;
+  height: 50vh;
+  color: white;
+  margin-left: -200px;
+}
+
+.AddId {
+  background-color: rgb(222, 217, 217);
+  width: 25%;
+  height: 50vh;
+  color: white;
+  margin-left: 0px;
+}
