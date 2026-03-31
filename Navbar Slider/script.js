@@ -8,6 +8,7 @@ const h2El = document.getElementById("H2");
 const h3El = document.getElementById("H3");
 const seacrhdivEl = document.getElementById("Search");
 const paragraphEl = document.querySelectorAll("#contentPara");
+const shareButton = document.getElementById("shareButton");
 let isOpen = false;
 
 menuEl.addEventListener("click", function () {
@@ -55,5 +56,24 @@ searchbuttonEl.addEventListener("click", function () {
     if (para.includes(searchText)) {
       seacrhdivEl.prepend(paragraphEl[i]);
     }
+  }
+});
+
+shareButton.addEventListener("click", function (event) {
+  if (navigator.share) {
+    navigator
+      .share({
+        title: "Google official websites",
+        url: "https://www.google.com",
+      })
+      .then(() => {
+        console.log("Thanks for sharing by the way");
+      })
+      .catch((error) => {
+        console.log("Error using web share api");
+        console.log(error);
+      });
+  } else {
+    alert("Browser does not support this facility!");
   }
 });
