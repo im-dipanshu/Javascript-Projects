@@ -9,7 +9,7 @@ header p {
   font-weight: 600;
 }
 .Navbar {
-  background-color: rgb(222, 217, 217);
+  background-color: #f5f5dc;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,7 +28,7 @@ header p {
   font-family: sans-serif;
 }
 .SideBar {
-  background-color: rgb(222, 217, 217);
+  background-color: #f5f5dc;
   width: 15%;
   height: 50vh;
   color: white;
@@ -41,7 +41,7 @@ header p {
 }
 
 .AddId {
-  background-color: rgb(222, 217, 217);
+  background-color: #f5f5dc;
   width: 18%;
   height: 50vh;
   color: white;
@@ -62,9 +62,13 @@ header p {
   border-radius: 2px;
   font-size: large;
   cursor: pointer;
+  margin-right: 10px;
+  background-color: #a6a315;
+  color: #ffffff;
+  border-radius: 5px;
 }
 #searchButton:hover {
-  background-color: rgb(155, 149, 149);
+  background-color: #e5f015;
 }
 h1 {
   color: rgb(142, 171, 149);
@@ -94,7 +98,7 @@ h1 {
 }
 #Backdrop {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   position: relative;
 }
@@ -103,4 +107,192 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+#tagline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #d2ea1e;
+  font-size: 5rem;
+  text-align: center;
+  z-index: 2;
+  font-family: sans-serif;
+  text-align: left;
+  margin: 0;      
+  line-height: 1.3; 
+  word-wrap: break-word; /
+}
+
+.selection1 {
+  border-bottom-right-radius: 20px;
+}
+#tagBox {
+  position: absolute;
+  top: 20%;
+  left: 16%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 40vh;
+}
+
+.Navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 10px 20px;
+  background-color: #f5f5dc;
+}
+
+.MenuBox {
+  display: flex;
+  align-items: center;           
+  gap: 10px;                     
+}
+
+#tagline {
+  font-size: 24px;
+  color: #d2ea1e;
+  margin: 0;                   
+  line-height: 1.2;
+}
+
+#searchBox {
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+  font-size: large;
+}
+
+#searchButton {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  cursor: pointer;
+  background-color: #a6a315;
+  color: #ffffff;
+}
+
+#searchButton:hover {
+  background-color: #e5f015;
+}
+
+@media (max-width:500px) {
+
+
+  body {
+    padding: 5px;
+  }
+  #Menu{
+    margin-left: 0px;
+  }
+  .Navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+
+  .MenuBox {
+    width: 100%;
+  }
+
+
+  .SideBar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 24px;
+    border-radius: 0;
+  }
+
+
+  .AddId {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+
+  #searchBox {
+    width: 70%;
+    margin-bottom: 10px;
+  }
+  #searchButton {
+    width: 25%;
+    margin: 0;
+  }
+
+
+  #tagline {
+    font-size: 2.5rem;
+    left: 75%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    width: 80%;
+  }
+
+
+  #tagBox {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+
+  .slection {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+  }
+
+
+  #contentPara {
+    font-size: 16px;
+  }
+  h1, #hLast {
+    font-size: 24px;
+  }
+
+  /* Backdrop video */
+  #Backdrop {
+    height: 50vh;
+  }
+  #Backdrop video {
+    height: 50vh;
+  }
+    .Navbar {
+    flex-direction: column;       /* stack menu + search vertically */
+    align-items: flex-start;      /* align left */
+    gap: 10px;
+  }
+
+  .MenuBox {
+    flex-direction: column;       /* logo above tagline on mobile */
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  #tagline {
+    font-size: 18px;
+  }
+
+  #searchBox {
+    width: 100%;
+  }
+
+  #searchButton {
+    width: 100%;
+  }
+
 }
