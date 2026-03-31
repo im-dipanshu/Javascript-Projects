@@ -37,6 +37,7 @@ header p {
   border-bottom-right-radius: 20px;
   /* opacity: 0.4; */
   position: absolute;
+  z-index: 1;
 }
 
 .AddId {
@@ -45,7 +46,7 @@ header p {
   height: 50vh;
   color: white;
   margin-left: 0px;
-  position: relative;
+  /* position: relative; */
   box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
 }
 #searchBox {
@@ -81,4 +82,25 @@ h1 {
 
 #Menu {
   margin-left: 20px;
+}
+
+#contentPara {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+#hLast {
+  font-weight: bold;
+  font-size: 40px;
+}
+#Backdrop {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#Backdrop video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
