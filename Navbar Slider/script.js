@@ -3,9 +3,12 @@ const sideEl = document.querySelector(".SideBar");
 
 const searchboxEl = document.getElementById("searchBox");
 const searchbuttonEl = document.getElementById("searchButton");
-const h1El = document.getElementById("H1");
-const h2El = document.getElementById("H2");
-const h3El = document.getElementById("H3");
+const h1El = document.getElementById("cocoaText");
+const h2El = document.getElementById("almondsText");
+const h3El = document.getElementById("coffeeText");
+const cocoaEl = document.getElementById("cocoa");
+const almondsEl = document.getElementById("almonds");
+const coffeeEl = document.getElementById("coffeBeans");
 const seacrhdivEl = document.getElementById("Search");
 const paragraphEl = document.querySelectorAll("#contentPara");
 const shareButton = document.getElementById("shareButton");
@@ -42,21 +45,24 @@ searchbuttonEl.addEventListener("click", function () {
   const headingText3 = h3El.textContent.trim().toLowerCase();
 
   if (headingText2.includes(searchText)) {
-    seacrhdivEl.prepend(h2El);
+    seacrhdivEl.prepend(coffeeEl);
+    seacrhdivEl.classList.add("secondBody");
   }
   if (headingText1.includes(searchText)) {
-    seacrhdivEl.prepend(h1El);
+    seacrhdivEl.prepend(cocoaEl);
+    seacrhdivEl.classList.add("secondBody");
   }
   if (headingText3.includes(searchText)) {
-    seacrhdivEl.prepend(h3El);
+    seacrhdivEl.prepend(almondsEl);
+    seacrhdivEl.classList.add("secondBody");
   }
 
-  for (i = 0; i <= paragraphEl.length; i++) {
-    const para = paragraphEl[i].textContent.trim().toLowerCase();
-    if (para.includes(searchText)) {
-      seacrhdivEl.prepend(paragraphEl[i]);
-    }
-  }
+  // for (i = 0; i <= paragraphEl.length; i++) {
+  //   const para = paragraphEl[i].textContent.trim().toLowerCase();
+  //   if (para.includes(searchText)) {
+  //     seacrhdivEl.prepend(paragraphEl[i]);
+  //   }
+  // }
 });
 
 shareButton.addEventListener("click", function (event) {
