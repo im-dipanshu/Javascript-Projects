@@ -15,7 +15,12 @@ body {
   align-items: center;
   padding: 10px 20px;
 }
-
+#secondNav {
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 #logo {
   height: 40px;
   width: 40px;
@@ -77,13 +82,13 @@ header p {
   border-radius: 5px;
   font-size: large;
   cursor: pointer;
-  background-color: #e65c00;
+  background-color: #ff6a00;
   color: #fff;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 #searchButton:hover {
-  background-color: #f67a27;
+  background-color: #e65c00;
   transform: scale(1.05);
 }
 
@@ -130,7 +135,7 @@ header p {
   padding: 8px 15px;
   border: none;
   border-radius: 5px;
-  background-color: #e65c00;
+  background-color: #ff6a00;
   color: white;
   font-size: 18px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -138,7 +143,7 @@ header p {
 }
 
 #shareButton:hover {
-  background-color: #f67a27;
+  background-color: #e65c00;
   transform: scale(1.05);
 }
 /* Content */
@@ -187,31 +192,43 @@ h1 {
 }
 #dairyMilk {
   background-color: rgba(213, 229, 255, 0.6);
-  width: 90%;
+  width: 80%;
   height: 40vh;
-  /* margin-left: 7%; */
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-top: 50px;
   align-items: center;
   justify-content: center;
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
 }
 #ferreroRocher {
   background-color: rgba(213, 229, 255, 0.6);
-  width: 90%;
+  width: 80%;
   height: 40vh;
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 40px;
 }
 #kitkatCaramel {
   background-color: rgba(213, 229, 255, 0.6);
-  width: 90%;
+  width: 80%;
   height: 40vh;
+  margin-top: 50px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 40px;
 }
 /* #Search {
   display: flex;
@@ -226,6 +243,8 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   flex-direction: row; /* 👈 change this */
+  justify-items: center; /* Horizontal alignment */
+  align-items: center;
 }
 
 .secondBody {
@@ -241,7 +260,7 @@ h1 {
 #buyNow {
   text-decoration: none;
   width: 80%;
-  padding: 12px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -263,7 +282,7 @@ h1 {
 #addToCart {
   text-decoration: none;
   width: 80%;
-  padding: 12px;
+  padding: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -273,13 +292,16 @@ h1 {
   color: black;
   border: 2px solid black;
   cursor: pointer;
-  margin-bottom: 10px;
   transition: all 0.3s ease;
 }
 
 #addToCart:hover {
-  background-color: black;
+  background-color: rgb(87, 80, 80);
   color: white;
+}
+
+#cartImage {
+  width: 35px;
 }
 /* Responsive */
 @media (max-width: 500px) {
