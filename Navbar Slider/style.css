@@ -4,14 +4,22 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  background-color: #eef6ff;
+}
 /* Navbar */
 .Navbar {
-  background-color: #f5f5dc;
+  background-color: rgba(213, 229, 255, 0.6);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+}
+
+#logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
 }
 
 header p {
@@ -31,8 +39,8 @@ header p {
   position: absolute;
   width: 15%;
   height: 50vh;
-  background-color: #f5f5dc;
-  transform: translateX(-100%);
+  background-color: rgba(232, 241, 255, 0.6);
+  transform: translateX(-120%);
   transition: all 0.8s ease;
   border-bottom-right-radius: 20px;
 
@@ -42,7 +50,6 @@ header p {
   justify-content: space-around;
   font-size: 40px;
   font-family: sans-serif;
-
   z-index: 1;
 }
 
@@ -51,7 +58,7 @@ header p {
   height: 50vh;
   margin-left: 0;
   transform: translateX(0%);
-  background-color: #f5f5dc;
+  background-color: rgba(232, 241, 255, 0.6);
   box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -62,7 +69,6 @@ header p {
   border-radius: 2px;
   font-size: large;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-
 }
 
 #searchButton {
@@ -71,13 +77,13 @@ header p {
   border-radius: 5px;
   font-size: large;
   cursor: pointer;
-  background-image: linear-gradient(to top, yellow, orange);
+  background-color: #e65c00;
   color: #fff;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 #searchButton:hover {
-  background-image: linear-gradient(to top, orange, yellow);
+  background-color: #f67a27;
   transform: scale(1.05);
 }
 
@@ -106,7 +112,6 @@ header p {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-
   z-index: 2;
 }
 
@@ -125,16 +130,15 @@ header p {
   padding: 8px 15px;
   border: none;
   border-radius: 5px;
-  background-image: linear-gradient(to top, yellow, orange);
+  background-color: #e65c00;
   color: white;
   font-size: 18px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
 }
 
 #shareButton:hover {
-  background-image: linear-gradient(to top, orange, yellow);
+  background-color: #f67a27;
   transform: scale(1.05);
 }
 /* Content */
@@ -163,61 +167,64 @@ h1 {
   background-color: black;
   color: rgb(155, 149, 149);
 }
-#logo {
-  height: 40px;
-  width: 40px;
-  border-radius: 40px;
-}
 
-#cocoaImage {
+/* All products and there images */
+#dairyMilkImage {
   height: 200px;
   width: 200px;
   border-radius: 50%;
 }
-#almondImage {
+#ferreroImage {
   height: 200px;
   width: 200px;
   border-radius: 50%;
   /* object-fit: cover; */
 }
-#cocoa {
-  background-color: #f5f5dc;
-  width: 30%;
+#kitkatImage {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+#dairyMilk {
+  background-color: rgba(213, 229, 255, 0.6);
+  width: 90%;
+  height: 40vh;
+  /* margin-left: 7%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#ferreroRocher {
+  background-color: rgba(213, 229, 255, 0.6);
+  width: 90%;
   height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-#almonds {
-  background-color: #f5f5dc;
-  width: 30%;
+#kitkatCaramel {
+  background-color: rgba(213, 229, 255, 0.6);
+  width: 90%;
   height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-#coffeeBeans {
-  background-color: #f5f5dc;
-  width: 30%;
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-#Search {
+/* #Search {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
+} */
+/* Search Boxs */
 #secondSearch {
   width: 100%;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  min-height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   flex-direction: row; /* 👈 change this */
 }
 
@@ -228,6 +235,51 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+}
+
+/* Buttons */
+#buyNow {
+  text-decoration: none;
+  width: 80%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: large;
+  background-color: #ff6a00; /* nice orange */
+  color: white;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#buyNow:hover {
+  background-color: #e65c00;
+}
+
+#addToCart {
+  text-decoration: none;
+  width: 80%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: large;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+#addToCart:hover {
+  background-color: black;
+  color: white;
 }
 /* Responsive */
 @media (max-width: 500px) {
@@ -250,7 +302,7 @@ h1 {
     position: relative;
     width: 100%;
     height: auto;
-    margin-left: 0;
+    margin-left: 120%;
     flex-direction: row;
     font-size: 24px;
     border-radius: 0;
