@@ -3,15 +3,18 @@ const sideEl = document.querySelector(".SideBar");
 
 const searchboxEl = document.getElementById("searchBox");
 const searchbuttonEl = document.getElementById("searchButton");
-const h1El = document.getElementById("cocoaText");
-const h2El = document.getElementById("almondsText");
-const h3El = document.getElementById("coffeeText");
+const dairyMilkCard = document.getElementById("dairyMilk");
+const ferreroCard = document.getElementById("ferreroRocher");
+const kitkatCard = document.getElementById("kitkatCaramel");
+const darkCard = document.getElementById("darkChoclate");
 const cocoaEl = document.getElementById("cocoa");
 const almondsEl = document.getElementById("almonds");
 const coffeeEl = document.getElementById("coffeBeans");
-const seacrhdivEl = document.getElementById("Search");
+const seacrhdivEl = document.getElementById("secondSearch");
 const paragraphEl = document.querySelectorAll("#contentPara");
 const shareButton = document.getElementById("shareButton");
+const footerPara = document.getElementById("footerText");
+const currentYear = new Date().getFullYear();
 let isOpen = false;
 
 menuEl.addEventListener("click", function () {
@@ -40,30 +43,36 @@ menuEl.addEventListener("click", function () {
 searchbuttonEl.addEventListener("click", function () {
   const searchText = searchboxEl.value.trim().toLowerCase();
 
-  const headingText1 = h1El.textContent.trim().toLowerCase();
-  const headingText2 = h2El.textContent.trim().toLowerCase();
-  const headingText3 = h3El.textContent.trim().toLowerCase();
+  const dairyMilkCleanText = dairyMilkCard.textContent.trim().toLowerCase();
+  const ferreroRocherCleanText = ferreroCard.textContent.trim().toLowerCase();
+  const kitkatCleanText = kitkatCard.textContent.trim().toLowerCase();
+  const darkChocolateCleanText = darkCard.textContent.trim().toLowerCase();
 
-  if (headingText2.includes(searchText)) {
-    seacrhdivEl.prepend(coffeeEl);
-    seacrhdivEl.classList.add("secondBody");
-  }
-  if (headingText1.includes(searchText)) {
-    seacrhdivEl.prepend(cocoaEl);
-    seacrhdivEl.classList.add("secondBody");
-  }
-  if (headingText3.includes(searchText)) {
-    seacrhdivEl.prepend(almondsEl);
-    seacrhdivEl.classList.add("secondBody");
+  if (dairyMilkCleanText.includes(searchText)) {
+    seacrhdivEl.prepend(dairyMilkCard);
   }
 
-  // for (i = 0; i <= paragraphEl.length; i++) {
-  //   const para = paragraphEl[i].textContent.trim().toLowerCase();
-  //   if (para.includes(searchText)) {
-  //     seacrhdivEl.prepend(paragraphEl[i]);
-  //   }
-  // }
+  if (ferreroRocherCleanText.includes(searchText)) {
+    seacrhdivEl.prepend(ferreroCard);
+  }
+
+  if (kitkatCleanText.includes(searchText)) {
+    seacrhdivEl.prepend(kitkatCard);
+  }
+
+  if (darkChocolateCleanText.includes(searchText)) {
+    seacrhdivEl.prepend(darkCard);
+  }
+
+  seacrhdivEl.classList.add("secondBody");
 });
+
+// for (i = 0; i <= paragraphEl.length; i++) {
+//   const para = paragraphEl[i].textContent.trim().toLowerCase();
+//   if (para.includes(searchText)) {
+//     seacrhdivEl.prepend(paragraphEl[i]);
+//   }
+// }
 
 shareButton.addEventListener("click", function (event) {
   if (navigator.share) {
@@ -83,3 +92,4 @@ shareButton.addEventListener("click", function (event) {
     alert("Browser does not support this facility!");
   }
 });
+footerPara.textContent = `© ${currentYear} Chocolate Delight Affiliate. All rights reserved.`;
