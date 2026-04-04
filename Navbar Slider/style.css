@@ -188,7 +188,10 @@ h1 {
 #kitkatImage {
   height: 200px;
   width: 200px;
-  border-radius: 50%;
+}
+#darakChoclateImage {
+  height: 150px;
+  width: 150px;
 }
 #dairyMilk {
   background-color: rgba(213, 229, 255, 0.6);
@@ -219,6 +222,18 @@ h1 {
   padding-bottom: 40px;
 }
 #kitkatCaramel {
+  background-color: rgba(213, 229, 255, 0.6);
+  width: 80%;
+  height: 40vh;
+  margin-top: 50px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+#darkChoclate {
   background-color: rgba(213, 229, 255, 0.6);
   width: 80%;
   height: 40vh;
@@ -278,7 +293,9 @@ h1 {
 #buyNow:hover {
   background-color: #e65c00;
 }
-
+#cocoaText {
+  font-family: sans-serif;
+}
 #addToCart {
   text-decoration: none;
   width: 80%;
@@ -302,6 +319,13 @@ h1 {
 
 #cartImage {
   width: 35px;
+}
+
+#footer {
+  width: 100%;
+  height: 10vh;
+  border-top: 3px solid;
+  border-top-color: rgba(213, 229, 255, 0.6);
 }
 /* Responsive */
 @media (max-width: 500px) {
