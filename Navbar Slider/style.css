@@ -8,8 +8,8 @@ body {
   background-color: #eef6ff;
 }
 /* Navbar */
-.Navbar {
-  background-color: rgba(213, 229, 255, 0.6);
+#Navselect {
+  background-color: rgba(232, 241, 255, 0.6);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,6 +98,7 @@ header p {
   height: 90vh;
   position: relative;
   overflow: hidden;
+  border-bottom: 8px solid rgba(232, 241, 255, 0.6);
 }
 
 #Backdrop video {

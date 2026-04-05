@@ -14,9 +14,11 @@ const seacrhdivEl = document.getElementById("secondSearch");
 const paragraphEl = document.querySelectorAll("#contentPara");
 const shareButton = document.getElementById("shareButton");
 const footerPara = document.getElementById("footerText");
+const anchorTags = document.querySelectorAll("#addToCart");
+const cartQuantity = document.getElementById("cartQuantity");
 const currentYear = new Date().getFullYear();
 let isOpen = false;
-
+const value = localStorage.getItem("QuantityofCart");
 menuEl.addEventListener("click", function () {
   isOpen = !isOpen;
   if (menuEl.src.endsWith("12314149.png")) {
@@ -92,4 +94,26 @@ shareButton.addEventListener("click", function (event) {
     alert("Browser does not support this facility!");
   }
 });
+let iteration = 0;
+
+anchorTags.forEach((anchor) => {
+  anchor.addEventListener("click", function () {
+    let current = parseInt(cartQuantity.textContent) || 0;
+
+    if (iteration % 2 === 0) {
+      cartQuantity.textContent = current + 1;
+      iteration += 1;
+    } else {
+      cartQuantity.textContent = current - 1;
+      iteration += 1;
+    }
+
+    localStorage.setItem("QuantityofCart", cartQuantity.textContent);
+  });
+});
 footerPara.textContent = `© ${currentYear} Chocolate Delight Affiliate. All rights reserved.`;
+
+window.addEventListener("load", () => {
+  const value = localStorage.getItem("QuantityofCart");
+  cartQuantity.textContent = value;
+});
